@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Route
+metadata:
+  name: caddy-andrea-route
+  labels:
+    app: caddy-andrea
+spec:
+  to:
+    kind: Service
+    name: caddy-andrea-service
+  tls:
+    termination: edge
